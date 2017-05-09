@@ -3,7 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26228.9
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Odin.Umbraco.ULinkedIn.PropertyEditor", "src\Odin.Umbraco.ULinkedIn.PropertyEditor\Odin.Umbraco.ULinkedIn.PropertyEditor.csproj", "{7EA0C07A-8BC4-40F9-8C1F-8C28E2D0450C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Odin.Umbraco.ULinkedIn.Web", "src\Odin.Umbraco.ULinkedIn.Web\Odin.Umbraco.ULinkedIn.Web.csproj", "{9F51FB91-ECB9-4C5F-B1AD-BA716AFCF05D}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7EA0C07A-8BC4-40F9-8C1F-8C28E2D0450C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EA0C07A-8BC4-40F9-8C1F-8C28E2D0450C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EA0C07A-8BC4-40F9-8C1F-8C28E2D0450C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EA0C07A-8BC4-40F9-8C1F-8C28E2D0450C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F51FB91-ECB9-4C5F-B1AD-BA716AFCF05D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F51FB91-ECB9-4C5F-B1AD-BA716AFCF05D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F51FB91-ECB9-4C5F-B1AD-BA716AFCF05D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F51FB91-ECB9-4C5F-B1AD-BA716AFCF05D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
