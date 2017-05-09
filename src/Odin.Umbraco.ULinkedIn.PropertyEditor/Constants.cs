@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Odin.Umbraco.ULinkedIn.PropertyEditor.Extensions;
-
-namespace Odin.Umbraco.ULinkedIn.PropertyEditor
+﻿namespace Odin.Umbraco.ULinkedIn.PropertyEditor
 {
     internal class Constants
     {

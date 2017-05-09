@@ -1,9 +1,4 @@
-﻿using Odin.Umbraco.ULinkedIn.PropertyEditor.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using website.Odin.Umbraco.ULinkedIn.PropertyEditor.Models;
+﻿using website.Odin.Umbraco.ULinkedIn.PropertyEditor.Models;
 
 namespace website.Odin.Umbraco.ULinkedIn.PropertyEditor.ViewModels
 {

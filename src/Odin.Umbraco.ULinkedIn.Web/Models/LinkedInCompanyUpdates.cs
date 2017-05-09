@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-
-namespace website.Odin.Umbraco.ULinkedIn.Web.Models
+﻿namespace website.Odin.Umbraco.ULinkedIn.Web.Models
 {
     //General
     public class LinkedInCompanyUpdates

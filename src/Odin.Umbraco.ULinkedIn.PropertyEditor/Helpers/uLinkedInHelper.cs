@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-//using global::Umbraco.Web;
-using website.Odin.Umbraco.ULinkedIn.PropertyEditor.Helpers;
+﻿using website.Odin.Umbraco.ULinkedIn.PropertyEditor.Helpers;
 
 namespace Odin.Umbraco.ULinkedIn.PropertyEditor.Helpers
-{ 
+{
     internal static class uLinkedInHelper
     {
         /*

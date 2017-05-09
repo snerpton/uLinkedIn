@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using Umbraco.Web.Mvc;
 using Odin.Umbraco.ULinkedIn.PropertyEditor;
@@ -9,13 +7,12 @@ using Odin.Umbraco.ULinkedIn.PropertyEditor.Models;
 using Odin.Umbraco.ULinkedIn.PropertyEditor.Helpers;
 using Odin.Umbraco.ULinkedIn.PropertyEditor.Extensions;
 using website.Odin.Umbraco.ULinkedIn.PropertyEditor.Helpers;
-using Newtonsoft.Json;
 using website.Odin.Umbraco.ULinkedIn.PropertyEditor.ViewModels;
 using website.Odin.Umbraco.ULinkedIn.PropertyEditor.Models;
 
 namespace website.Odin.Umbraco.ULinkedIn.PropertyEditor.Controllers
 {
-    
+
     public class ULinkedInController : UmbracoAuthorizedController  //RenderMvcController
     {
         /// <summary>
