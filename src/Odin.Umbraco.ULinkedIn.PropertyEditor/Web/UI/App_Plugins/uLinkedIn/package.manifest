@@ -1,0 +1,55 @@
+﻿{
+    propertyEditors: [
+        {
+            alias: "Odin.Umbraco.ULinkedIn",
+            name:  "LinkedIn OAuth",
+            editor: {
+                view: "~/App_Plugins/uLinkedIn/views/uLinkedIn.html",
+                valueType: "JSON"
+            },
+            prevalues: {
+                fields: [
+                    {
+                        label: "Client ID",
+                        description: "Enter the 'Client ID' for the LinkedIn application to authenticate against.",
+                        key: "clientId",
+                        view: "textstring",
+                        validation: [
+                            {
+                                type: "Required"
+                            }
+                        ]
+                    },
+                    {
+                        label: "Client Secret",
+                        description: "Enter the 'Client Secret' for the LinkedIn application to authenticate against.",
+                        key: "clientSecret",
+                        view: "textstring",
+                        validation: [
+                            {
+                                type: "Required"
+                            }
+                        ]
+                    },
+                    {
+                        label: "Toggle Developer Mode",
+                        description: "Turn on for developer options.",
+                        key: "toggleDeveloperMode",
+                        view: "boolean",
+                        validation: [
+                            {
+                                type: "Required"
+                            }
+                        ]
+                    }
+                ]
+            },
+			defaultConfig: {
+				toggleDeveloperMode: "0"
+			}
+        }
+    ],
+    javascript: [
+        '~/App_Plugins/uLinkedIn/js/uLinkedIn.js'
+    ]
+}

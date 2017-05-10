@@ -1,0 +1,29 @@
+﻿
+@inherits UmbracoViewPage<website.Odin.Umbraco.ULinkedIn.PropertyEditor.ViewModels.RequestAnAuthorizationCodeCallbackErrorViewModel>
+@{
+    Layout = null;
+
+
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+
+    <h1 style="color:red;">Ooops, there was an error authenticating your user with LinkedIn</h1>
+    <p>@Html.Raw(Model.HumanMessage)</p>
+
+    <hr />
+    <p>
+        Error: @Model.Error<br />
+        ErrorCode: @Model.ErrorCode <br />
+        ErrorDescription: @Model.ErrorDescription 
+    </p>
+
+</body>
+</html>

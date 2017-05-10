@@ -1,0 +1,46 @@
+﻿@using Newtonsoft.Json
+@inherits UmbracoViewPage<website.Odin.Umbraco.ULinkedIn.PropertyEditor.ViewModels.RequestAnAuthorizationCodeCallbackOKViewModel>
+@{
+        Layout = null;
+
+
+        string test = JsonConvert.SerializeObject(Model.ULinkedInProvertyModel);
+
+        int test2 = 1;
+
+    }
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+
+
+    <script>
+        @*
+        "self.opener.angular.element('#uTwit_" + options.ScopeId + @"').scope()." + options.Callback + @"({ screenName: '" + accountSettings.screen_name + @"', token:'" + accessToken.Token + @"', tokenSecret:'" + accessToken.TokenSecret + @"' }); window.close();
+            *@
+        console.log("Hello World!");
+
+
+        self.opener.console.log('Chris is here!!!');
+        self.opener.angular.element('#uLinkedIn_@Model.ScopeId').scope().model.value = @Html.Raw(JsonConvert.SerializeObject(Model.ULinkedInProvertyModel));
+        self.opener.console.log('Chris is leaving here!!!');
+
+        //console.log("Good Bye!");
+    </script>
+
+</head>
+<body>
+
+
+    <h1 style="color:red;">Yay, we're on the way! @test</h1>
+
+
+
+
+    <p></p>
+</body>
+</html>

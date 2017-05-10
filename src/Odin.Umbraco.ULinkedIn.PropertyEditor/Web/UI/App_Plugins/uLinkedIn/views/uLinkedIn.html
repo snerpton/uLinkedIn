@@ -1,0 +1,25 @@
+﻿<div id="uLinkedIn_{{$id}}" ng-controller="Odin.Umbraco.ULinkedIn.PropertyEditors.LinkedInAuthorizerController">
+
+    <ul class="unstyled">
+        <li ng-show="model.value">
+            <i></i>
+            <a href="#" prevent-default ng-click="remove()" ng-mouseenter="hover(true)" ng-mouseleave="hover(false)">
+                <i ng-show="hovering" class="icon icon-delete red hover-show"></i>
+                <i ng-show="!hovering" class="icon-user hover-hide"></i> 
+                {{model.value.AuthorizedUser}}
+            </a>
+            <br />Expires: {{model.value.Expires}}
+            <br /><button prevent-default ng-click="authorize()">Refresh token</button>
+        </li>
+        <li ng-show="!model.value">
+            <i class="icon icon-add blue"></i>
+            <a href="#" ng-click="authorize()" prevent-default="">
+                Authorize...
+            </a>
+        </li>
+    </ul>
+
+    <div ng-if="model.config.toggleDeveloperMode">
+        <pre>model.value: {{model.value | json}}</pre>
+    </div>
+</div>

@@ -30,9 +30,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="businesslogic">
-      <HintPath>..\..\Reference\Umbraco-7.5.3\businesslogic.dll</HintPath>
-    </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Reference\Umbraco-7.5.3\Newtonsoft.Json.dll</HintPath>
@@ -75,6 +72,20 @@
     <Compile Include="ViewModels\RequestAnAuthorizationCodeCallbackErrorViewModel.cs" />
     <Compile Include="ViewModels\RequestAnAuthorizationCodeCallbackOKViewModel.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Web\UI\App_Plugins\uLinkedIn\package.manifest" />
+    <None Include="Web\UI\Views\ULinkedIn\RequestAnAuthorizationCode.cshtml" />
+    <None Include="Web\UI\Views\ULinkedIn\RequestAnAuthorizationCodeCallbackError.cshtml" />
+    <None Include="Web\UI\Views\ULinkedIn\RequestAnAuthorizationCodeCallbackOK.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web\UI\App_Plugins\uLinkedIn\js\uLinkedIn.js" />
+    <Content Include="Web\UI\App_Plugins\uLinkedIn\views\uLinkedIn.html" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy /s /y "$(TargetDir)Odin.Umbraco.ULinkedIn.PropertyEditor.*" "C:\inetpub\wwwSites\sandbox.local\sandbox.local\bin"
+xcopy /s /y "$(ProjectDir)Web\UI\Views\*" "C:\inetpub\wwwSites\sandbox.local\sandbox.local\Views"
+xcopy /s /y "$(ProjectDir)Web\UI\App_Plugins\*" "C:\inetpub\wwwSites\sandbox.local\sandbox.local\App_Plugins"</PostBuildEvent>
+  </PropertyGroup>
 </Project>
