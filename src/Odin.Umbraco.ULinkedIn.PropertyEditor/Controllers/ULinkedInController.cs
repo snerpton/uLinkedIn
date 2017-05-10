@@ -133,8 +133,8 @@ namespace website.Odin.Umbraco.ULinkedIn.PropertyEditor.Controllers
                     ULinkedInProvertyModel = new ULinkedInModel() {
                         AccessToken = response.AccessToken,
                         AuthorizedUser = $"{linkedInBasicProfile.FirstName} {linkedInBasicProfile.LastName}",
-                        //ClientId = "",
-                        //ClientSecret = "",
+                        ClientId = "",
+                        ClientSecret = "",
                         Expires = response.Expires
                     }
             });

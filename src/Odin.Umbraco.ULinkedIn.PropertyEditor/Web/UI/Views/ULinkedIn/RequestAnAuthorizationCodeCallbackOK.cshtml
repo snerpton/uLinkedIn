@@ -27,6 +27,8 @@
 
         self.opener.console.log('Chris is here!!!');
         self.opener.angular.element('#uLinkedIn_@Model.ScopeId').scope().model.value = @Html.Raw(JsonConvert.SerializeObject(Model.ULinkedInProvertyModel));
+        self.opener.angular.element('#uLinkedIn_@Model.ScopeId').scope().model.value.ClientId = self.opener.angular.element('#uLinkedIn_@Model.ScopeId').scope().model.config.clientId;
+        self.opener.angular.element('#uLinkedIn_@Model.ScopeId').scope().model.value.ClientSecret = self.opener.angular.element('#uLinkedIn_@Model.ScopeId').scope().model.config.clientSecret;
         self.opener.console.log('Chris is leaving here!!!');
 
         //console.log("Good Bye!");
