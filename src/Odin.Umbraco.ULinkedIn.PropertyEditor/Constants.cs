@@ -32,11 +32,11 @@
         /// <summary>
         /// LinkedIn API key
         /// </summary>
-        internal const string LinkedInClientId = "86cswku1qfb2gj";
+        //internal const string LinkedInClientId = string.Empty; //"86cswku1qfb2gj";
         /// <summary>
         /// LinkedIn secret key
         /// </summary>
-        internal const string LinkedInClientSecret = "jWtSscFFo7GuRL56";
+        //internal const string LinkedInClientSecret = string.Empty; //"jWtSscFFo7GuRL56";
         /// <summary>
         /// URL that LinkedIn redirects following an attempt to authorize. LinkedIn calls this 'redirectUri' 
         /// </summary>

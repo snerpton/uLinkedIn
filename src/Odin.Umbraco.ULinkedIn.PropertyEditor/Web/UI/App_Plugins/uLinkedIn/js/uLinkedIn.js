@@ -16,7 +16,7 @@
                 ContentTypeAlias: editorState.current.contentTypeAlias, 
                 PropertyAlias: $scope.model.alias,
                 ScopeId: $scope.$id,
-                Callback: "authorizeCallback"
+                //Callback: "authorizeCallback"
             };
             //window.open('/App_Plugins/utwit/twitteroauth1callback.aspx?o=' + encodeRequestOptions(requestOptions), 'Authorize', 'scrollbars=no,resizable=yes,menubar=no,width=800,height=600');
             //window.open('/auth/ulinkedin/RequestAnAuthorizationCode?o=' + encodeRequestOptions(requestOptions), 'Authorize', 'scrollbars=no,resizable=yes,menubar=no,width=800,height=600');
@@ -24,9 +24,9 @@
             //window.open('/auth/ulinkedin/RequestAnAuthorizationCode', 'Authorize', 'scrollbars=no,resizable=yes,menubar=no,width=800,height=600');
             //window.open('/umbraco/backoffice/auth/ulinkedin/RequestAnAuthorizationCode?o=' + encodeRequestOptions(requestOptions), 'Authorize', 'scrollbars=no,resizable=yes,menubar=no,width=800,height=600');
 
-            var requestOptions = {
-                ScopeId: $scope.$id
-            };
+            //var requestOptions = {
+            //    ScopeId: $scope.$id
+            //};
             window.open('/umbraco/backoffice/auth/ulinkedin/RequestAnAuthorizationCode?o=' + encodeRequestOptions(requestOptions), 'Authorize', 'scrollbars=no,resizable=yes,menubar=no,width=800,height=600');
         };
         $scope.authorizeCallback = function (data) {

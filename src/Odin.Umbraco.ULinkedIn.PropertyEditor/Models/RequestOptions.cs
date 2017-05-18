@@ -9,7 +9,7 @@ namespace Odin.Umbraco.ULinkedIn.PropertyEditor.Models
 		public string ContentTypeAlias { get; set; }
 		public string PropertyAlias { get; set; }
 		public string ScopeId { get; set; }
-		public string Callback { get; set; }
+		//public string Callback { get; set; }
 
 		public static bool TryParse(string input, out RequestOptions opts)
 		{

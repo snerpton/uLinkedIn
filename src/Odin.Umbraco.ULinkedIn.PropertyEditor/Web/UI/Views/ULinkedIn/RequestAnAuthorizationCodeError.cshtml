@@ -1,7 +1,9 @@
 ﻿
-@inherits UmbracoViewPage<website.Odin.Umbraco.ULinkedIn.PropertyEditor.Controllers.ProductViewModel>
+@*@inherits UmbracoViewPage<website.Odin.Umbraco.ULinkedIn.PropertyEditor.Controllers.ProductViewModel>*@
+@*@inherits Umbraco.Web.Mvc.UmbracoTemplatePage*@
+@inherits UmbracoViewPage<website.Odin.Umbraco.ULinkedIn.PropertyEditor.ViewModels.RequestAnAuthorizationCodeErrorViewModel>
 @{
-    Layout = null;
+//Layout = null;
 
 
 }
@@ -25,5 +27,6 @@
     <h4>
         Incorrect parameter in Umbraco, so we haven't tried to authenticate with LinkedIn.
     </h4>
+    <p>@Model.HumanMessage</p>
 </body>
 </html>

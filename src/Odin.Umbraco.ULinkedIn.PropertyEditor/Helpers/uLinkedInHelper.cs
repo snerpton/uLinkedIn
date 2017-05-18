@@ -1,18 +1,19 @@
-﻿using website.Odin.Umbraco.ULinkedIn.PropertyEditor.Helpers;
+﻿using System.Collections.Generic;
+using System.Linq;
+using Umbraco.Web;
+using website.Odin.Umbraco.ULinkedIn.PropertyEditor.Helpers;
 
 namespace Odin.Umbraco.ULinkedIn.PropertyEditor.Helpers
 {
     internal static class uLinkedInHelper
     {
-        /*
         /// <summary>
         /// Gets the pre value options by alias.
         /// </summary>
 		/// <param name="contentTypeAlias">The content type alias.</param>
 		/// <param name="propertyAlias">The property alias.</param>
         /// <returns></returns>
-		internal static IDictionary<string, string> GetPreValueOptionsByAlias(string contentTypeAlias,
-			string propertyAlias)
+		internal static IDictionary<string, string> GetPreValueOptionsByAlias(string contentTypeAlias, string propertyAlias)
         {
 	        var services = UmbracoContext.Current.Application.Services;
 	        var contentType = services.ContentTypeService.GetContentType(contentTypeAlias);
@@ -26,14 +27,13 @@ namespace Odin.Umbraco.ULinkedIn.PropertyEditor.Helpers
 
 	        return preValues.PreValuesAsDictionary.ToDictionary(x => x.Key, x => x.Value.Value);
         }
-        */
         
-        internal static OAuth2Provider GenerateLinkedInOAuth2Provider()
+        internal static OAuth2Provider GenerateLinkedInOAuth2Provider(string clientId, string clientSecret)
         {
             return new OAuth2Provider()
             {
-                ClientId = Constants.LinkedInClientId,
-                ClientSecret = Constants.LinkedInClientSecret,
+                ClientId = clientId,
+                ClientSecret = clientSecret,
                 AuthUri = Constants.LinkedInRequestAuthorizationBaseUrl,
                 AccessTokenUri = Constants.LinkedInRequestAccessTokenBaseUrl,
                 UserInfoUri = Constants.LinkedInUserInfoUrl,

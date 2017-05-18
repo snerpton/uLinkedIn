@@ -46,10 +46,11 @@
   <ItemGroup>
     <Compile Include="Models\LinkedInCompanyUpdates.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repositories\ILinkedInGetCompanyUpdatesRepository.cs" />
-    <Compile Include="Repositories\ILinkedInGetSpecificCompanyUpdateRepository.cs" />
-    <Compile Include="Repositories\LinkedInGetCompanyUpdatesRepository.cs" />
-    <Compile Include="Repositories\LinkedInGetSpecificCompanyUpdateRepository.cs" />
+    <Compile Include="Repositories\ILinkedInCompanyUpdateRepository.cs" />
+    <Compile Include="Repositories\LinkedInCompanyUpdateRepository.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy /s /y "$(TargetDir)Odin.Umbraco.ULinkedIn.Web.*" "C:\inetpub\wwwSites\sandbox.local\sandbox.local\bin"</PostBuildEvent>
+  </PropertyGroup>
 </Project>
