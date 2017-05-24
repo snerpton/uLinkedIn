@@ -45,7 +45,7 @@ namespace website.Odin.Umbraco.ULinkedIn.PropertyEditor.Controllers
             {
                 //throw new System.Exception(requestOptions.ToString());
                 //ToDo: Style RequestAnAuthorizationCode template
-                return View("RequestAnAuthorizationCodeError", new RequestAnAuthorizationCodeErrorViewModel() { HumanMessage = "Another fucking error: " + requestOptions.ContentTypeAlias + " : " + requestOptions.PropertyAlias + " : " + requestOptions.ScopeId });
+                return View("RequestAnAuthorizationCodeError", new RequestAnAuthorizationCodeErrorViewModel() { HumanMessage = "Another error...: " + requestOptions.ContentTypeAlias + " : " + requestOptions.PropertyAlias + " : " + requestOptions.ScopeId });
             }
             
             return Redirect(OAuth2.CreateRedirect(oAuth2Provider, Constants.LocalRedirectUri));

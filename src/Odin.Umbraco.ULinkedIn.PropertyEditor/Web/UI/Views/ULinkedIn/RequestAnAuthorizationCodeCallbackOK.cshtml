@@ -2,47 +2,36 @@
 @inherits UmbracoViewPage<website.Odin.Umbraco.ULinkedIn.PropertyEditor.ViewModels.RequestAnAuthorizationCodeCallbackOKViewModel>
 @{
         Layout = null;
-
-
-        string test = JsonConvert.SerializeObject(Model.ULinkedInProvertyModel);
-
-        int test2 = 1;
-
+    
+        string rtnFromLinkedIn = JsonConvert.SerializeObject(Model.ULinkedInProvertyModel);
     }
 
 <!DOCTYPE html>
-
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title></title>
+    <title>LinkedIn: successfully authenticated</title>
 
+    <style>
+        body {
+            margin: 10px 30px 10px 30px;
+        }
+    </style>
 
     <script>
-        @*
-        "self.opener.angular.element('#uTwit_" + options.ScopeId + @"').scope()." + options.Callback + @"({ screenName: '" + accountSettings.screen_name + @"', token:'" + accessToken.Token + @"', tokenSecret:'" + accessToken.TokenSecret + @"' }); window.close();
-            *@
-        console.log("Hello World!");
-
-
-        self.opener.console.log('Chris is here!!!');
+        //console.log("Hello World!");
+        //self.opener.console.log('Chris is here!!!');
         self.opener.angular.element('#uLinkedIn_@Model.ScopeId').scope().model.value = @Html.Raw(JsonConvert.SerializeObject(Model.ULinkedInProvertyModel));
         self.opener.angular.element('#uLinkedIn_@Model.ScopeId').scope().model.value.ClientId = self.opener.angular.element('#uLinkedIn_@Model.ScopeId').scope().model.config.clientId;
         self.opener.angular.element('#uLinkedIn_@Model.ScopeId').scope().model.value.ClientSecret = self.opener.angular.element('#uLinkedIn_@Model.ScopeId').scope().model.config.clientSecret;
-        self.opener.console.log('Chris is leaving here!!!');
-
+        //self.opener.console.log('Chris is leaving here!!!');
         //console.log("Good Bye!");
     </script>
 
 </head>
 <body>
 
-
-    <h1 style="color:red;">Yay, we're on the way! @test</h1>
-
-
-
-
-    <p></p>
+    <h1>Success!</h1>
+    <p>You have successfully authenticated with LinkedIn.</p>
 </body>
 </html>
