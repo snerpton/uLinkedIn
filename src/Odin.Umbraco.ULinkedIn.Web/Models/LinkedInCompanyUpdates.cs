@@ -43,11 +43,24 @@
     public class Share
     {
         public string comment { get; set; }
+        public Content content { get; set; }
         public string id { get; set; }
         public Source source { get; set; }
         public long timestamp { get; set; }
         public Visibility visibility { get; set; }
     }
+
+    public class Content
+    {
+        public string description { get; set; }
+        public string eyebrowUrl { get; set; }
+        public string shortenedUrl { get; set; }
+        public string submittedImageUrl { get; set; }
+        public string submittedUrl { get; set; }
+        public string thumbnailUrl { get; set; }
+        public string title { get; set; }
+    }
+
     public class Source
     {
         public Serviceprovider serviceProvider { get; set; }
